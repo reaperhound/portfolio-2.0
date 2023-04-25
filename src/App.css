@@ -251,7 +251,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90deg, hsla(252, 6%, 84%, 1) 0%, hsla(6, 61%, 59%, 1) 99%, hsla(0, 0%, 100%, 1) 100%);  font-size: 20px;
+  /* background: linear-gradient(90deg, hsla(252, 6%, 84%, 1) 0%, hsla(6, 61%, 59%, 1) 99%, hsla(0, 0%, 100%, 1) 100%);  font-size: 20px; */
+  background: linear-gradient(to right, #f26260, #f57f67, #f89b6e, #fac77a, #fca76e);
   margin-bottom: 16px;
   display: inline-block;
 }
@@ -356,15 +357,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: #F8E8E8;
 }
 .project h2 {
 	font-size: 45px;
+  color: #2C1313;
 	font-weight: 700;
   text-align: center;
 }
 .project p {
-  color: #B8B8B8;
+  color: #1C131C;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -386,7 +388,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #fff;
+  color: #1C131C;
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -401,7 +403,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(to bottom, #F8E8E8, #FDB813, #FFA500, #FF8C00, #FF6900, #FF5733);
     top: 0;
     left: 0;
     z-index: -1;
@@ -433,7 +435,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(to bottom, #F8E8E8, #FDB813, #FFA500, #FF8C00, #FF6900, #FF5733);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -480,7 +482,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(to bottom, #F8E8E8, #FDB813, #FFA500, #FF8C00, #FF6900, #FF5733);
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -628,4 +630,5 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
 
