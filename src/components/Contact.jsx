@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 export const Contact = () => {
   const [buttonText, setButtonText] = useState("Send");
   const [modalOpen, setModalOpen] = useState(false)
+  const [alertText, setAlertText] = useState("")
 
   const {
     handleSubmit,
@@ -32,9 +33,13 @@ export const Contact = () => {
       .then(async (response) => {
         let json = await response.json();
         if (json.success) {
-          setButtonText("Sent");
-          setModalOpen(true)
           console.log(json.success);
+          setButtonText("Sent");
+          setAlertText("**Response Successfully Sent")
+          setTimeout(()=> {
+            setButtonText("Send");
+            setAlertText("")
+          },2000)
         } else {
           alert("Not Sent");
         }
@@ -46,30 +51,9 @@ export const Contact = () => {
     reset();
   };
 
-  function Modal() {
-    return (
-      <div className="modal">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">
-            Congratulations random Internet user!
-          </h3>
-          <p className="py-4">
-            You've been selected for a chance to get one year of subscription to
-            use Wikipedia for free!
-          </p>
-          <div className="modal-action">
-            <label className="btn" onClick={()=> {setModalOpen(false)}}>Yay!</label>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <section className="contact" id="connect">
-      {
-        modalOpen && <Modal />
-      }
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
@@ -185,6 +169,7 @@ export const Contact = () => {
                         >
                           <span>{buttonText}</span>
                         </button>
+                        <p style={{color: "yellow", fontSize : "15px", fontWeight: "bold"}} role="alert">{alertText}</p>
                       </Col>
                     </Row>
                   </form>
