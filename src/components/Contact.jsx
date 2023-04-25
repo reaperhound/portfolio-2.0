@@ -4,6 +4,8 @@ import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { useForm } from "react-hook-form";
+import footerImg from "../assets/img/wave-haikei.svg"
+import { Footer } from "./Footer";
 
 
 export const Contact = () => {
@@ -179,6 +181,7 @@ export const Contact = () => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </section>
   );
 };
