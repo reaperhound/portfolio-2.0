@@ -128,9 +128,14 @@ export const Contact = () => {
                           })}
                           aria-invalid={errors.email ? "true" : "false"}
                         />
-                        {errors.email && (
-                          <p role="alert">{errors.email?.message}</p>
+                        {errors.email?.type === "required" && (
+                          <p role="alert">Please enter email</p>
                         )}
+                        {
+                          errors.email?.type === "pattern" && (
+                            <p role="alert">Invalid mail</p>
+                          )
+                        }
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
@@ -139,6 +144,9 @@ export const Contact = () => {
                           {...register("phone", {
                             required: true,
                             maxLength: 13,
+                            pattern: {
+                              value: /^\+[\d-()\/.\s]{7,16}\d$/,
+                            }
                           })}
                           aria-invalid={errors.phone ? "true" : "false"}
                         />
@@ -146,8 +154,13 @@ export const Contact = () => {
                           <p role="alert">Please enter number</p>
                         )}
                         {errors.phone?.type === "maxLength" && (
-                          <p role="alert">Invalid Number</p>
+                          <p role="alert">Too much digits</p>
                         )}
+                        {
+                          errors.phone?.type === "pattern" && (
+                            <p role="alert">Invalid number</p>
+                          )
+                        }
                       </Col>
                       <Col size={12} className="px-1">
                         <textarea
