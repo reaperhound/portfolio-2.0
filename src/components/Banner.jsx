@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { useMediaQuery } from "react-responsive";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,6 +13,8 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = ["Web Developer"];
   const period = 2000;
+
+  const isSmallScreen = useMediaQuery({ maxDeviceWidth : 767})
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -64,7 +67,15 @@ export const Banner = () => {
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
-                    {`Hi! I'm Ajmal ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} a`}{" "}
+                    {
+                      isSmallScreen ? 
+                      (
+                        `Hi! I'm Ajmal a ${" "}`
+                      ) : 
+                      (
+                        `Hi! I'm Ajmal ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} ${"\u00A0"} a ${" "}`
+                      )
+                    }
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
