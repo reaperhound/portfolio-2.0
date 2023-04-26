@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/ps-minimal-logo.png';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import linkedIn from '../assets/img/nav-icon1.svg';
+import resume from '../assets/img/resume-icon-white.svg';
+import gitHub from '../assets/img/github-icon-white.svg';
 import { HashLink } from 'react-router-hash-link';
+import { Tooltip } from "react-tooltip";
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -13,6 +14,12 @@ export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+
+  const socialLinks = {
+    linkedIn : "https://www.linkedin.com/in/ajmalkhana007/",
+    github : "https://github.com/reaperhound",
+    resume : "https://drive.google.com/uc?export=download&id=19nDYNn0pnZOjNTlQofE8mwBaceN41JKj",
+  }
 
   useEffect(() => {
     const onScroll = () => {
@@ -52,9 +59,24 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+                <Tooltip id="linkedIn-tooltip" />
+                <a
+                data-tooltip-id="linkedIn-tooltip" 
+                data-tooltip-content="LinkedIn" 
+                data-tooltip-place="top"
+                href={socialLinks.linkedIn}><img src={linkedIn}  alt="" /></a>
+                <Tooltip id="resume-tooltip" />
+                <a
+                data-tooltip-id="resume-tooltip" 
+                data-tooltip-content="Resume/CV" 
+                data-tooltip-place="top"
+                href={socialLinks.resume} download><img src={resume} alt="" style={{width:"50%"}}  /></a>
+                <Tooltip id="github-tooltip" />
+                <a
+                data-tooltip-id="github-tooltip" 
+                data-tooltip-content="GitHub" 
+                data-tooltip-place="top"
+                href={socialLinks.github}><img src={gitHub} alt="" style={{width:"55%"}} /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

@@ -1,6 +1,7 @@
 import { NavBar } from './components/Navbar'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-tooltip/dist/react-tooltip.css'
 import { Banner } from './components/Banner';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
