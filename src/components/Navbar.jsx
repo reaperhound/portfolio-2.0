@@ -18,7 +18,7 @@ export const NavBar = () => {
   const socialLinks = {
     linkedIn : "https://www.linkedin.com/in/ajmalkhana007/",
     github : "https://github.com/reaperhound",
-    resume : "https://drive.google.com/uc?export=download&id=19nDYNn0pnZOjNTlQofE8mwBaceN41JKj",
+    resume : "https://drive.google.com/uc?export=download&id=1iLZIqUztxwxpkfjC1AmOZ2fhph0Wn4Sx",
   }
 
   useEffect(() => {
