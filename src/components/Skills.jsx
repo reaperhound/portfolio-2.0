@@ -6,10 +6,13 @@ import bootsrap from "../assets/img/bootstrap.png";
 import nodejs from "../assets/img/nodejs.png";
 import npm from "../assets/img/npm.png";
 import javascript from "../assets/img/javascript.png";
+import typescript from "../assets/img/typescript.png"
 import react from "../assets/img/react.png";
+import nextjs from "../assets/img/nextjs.svg"
 import mongodb from "../assets/img/mongodb.png";
 import express from "../assets/img/express.png";
 import figma from "../assets/img/figma.png";
+import prisma from "../assets/img/prisma.svg"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "react-circular-progressbar/dist/styles.css";
@@ -51,7 +54,28 @@ export const Skills = () => {
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
+                  <img src={react} alt="" srcset="" />
+                </div>
+                <div>
+                  <img src={nextjs} alt="" />
+                </div>
+                <div>
+                  <img src={typescript} alt="" style={{height: "159px", width: "159px"}} />
+                </div>
+                <div>
+                  <img src={prisma} alt="" style={{height: "165px", width: "165px"}} />
+                </div>
+                <div className="item">
                   <img src={github} alt="" srcset="" />
+                </div>
+                <div className="item">
+                  <img src={nodejs} alt="" srcset="" />
+                </div>
+                <div className="item">
+                  <img src={npm} alt="" srcset="" />
+                </div>
+                <div className="item">
+                  <img src={express} alt="" srcset="" />
                 </div>
                 <div className="item">
                   <img src={html} alt="" srcset="" />
@@ -69,29 +93,11 @@ export const Skills = () => {
                   <img src={bootsrap} alt="" srcset="" />
                 </div>
                 <div className="item">
-                  <img src={nodejs} alt="" srcset="" />
-                </div>
-                <div className="item">
-                  <img src={npm} alt="" srcset="" />
-                </div>
-                <div className="item">
-                  <img src={express} alt="" srcset="" />
-                </div>
-                <div className="item">
-                  <img src={bootsrap} alt="" srcset="" />
-                </div>
-                <div className="item">
-                  <img src={react} alt="" srcset="" />
-                </div>
-                <div className="item">
                   <img src={mongodb} alt="" srcset="" />
                 </div>
-                <div className="item">
+                {/* <div className="item">
                   <img src={figma} alt="" srcset="" />
-                </div>
-                <div className="item">
-                  <img src={bootsrap} alt="" srcset="" />
-                </div>
+                </div> */}
               </Carousel>
             </div>
           </div>
